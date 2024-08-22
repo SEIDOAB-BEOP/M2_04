@@ -14,6 +14,7 @@ namespace BOOP_04_03
 
         static void Main(string[] args)
         {
+
             // Four ways to declare tuples
             // 1. Types inferred - Elements accessed using .Item
             var Book1 = ("Robinson Crusoe", "Daniel Defoe", 150.50M);  
@@ -21,7 +22,10 @@ namespace BOOP_04_03
 
             // 3. Types inferred, elements named - accessed by name
             var Book2 = (Title: "Robinson Crusoe", Author: "Daniel Defoe", Price: 150.50M);
-            Console.WriteLine(Book2.Title);         // Robinson Crusoe
+            Console.WriteLine(Book2.Title);       // Robinson Crusoe
+
+            Book2.Title = "hello";
+            Console.WriteLine(Book2);
 
             // 2. Types explicit, - Elements accessed using .Item
             (string, string, decimal) Book3 = ("Robinson Crusoe", "Daniel Defoe", 150.50M);
